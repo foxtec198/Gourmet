@@ -730,7 +730,23 @@ async function get_prods(){
                 list_prods.appendChild(li)
             })
         }else{
-    
+            const div = document.createElement('div')
+            div.classList.add('d-flex', 'justify-content-center', 'flex-column', 'gap-2', 'align-items-center', 'mt-5')
+
+            const span = document.createElement('span')
+            span.textContent = 'Nenhum produto cadastrado ainda, Clique no Botão para iniciar!'
+
+            const btn = document.createElement('button')
+            btn.classList.add('btn', 'btn-success')
+            btn.textContent = 'Cadastrar Produtos'
+            btn.addEventListener('click', function(){
+                change_screen('estoque')
+            })
+
+            div.appendChild(span)
+            div.appendChild(btn)
+            list_prods.appendChild(div)
+
         }
     }
 
