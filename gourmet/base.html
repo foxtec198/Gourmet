@@ -139,7 +139,11 @@
           const res = await req.json()
           if(req.ok){
             document.querySelectorAll('.logoLoja').forEach(item => {
-              item.src = server + 'img/gourmet/' + res.logo
+              if(res.logo == 'logo.png'){
+                item.src = server + 'img/' + res.logo
+              }else{
+                item.src = server + 'img/gourmet/' + res.logo
+              }
             })
           }else{toast(res, 'erro')}
         }

@@ -172,7 +172,11 @@ async function get_loja(){
     const res = await req.json()
 
     document.querySelectorAll('.logo').forEach(item =>{
-        item.src = server + 'img/gourmet/' + res.logo
+        if(res.logo == 'logo.png'){
+            item.src = server + 'img/' + res.logo
+        }else{
+            item.src = server + 'img/gourmet/' + res.logo
+        }
     })
 
     document.querySelectorAll('#nome_loja').forEach(item => {
