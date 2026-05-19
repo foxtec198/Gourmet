@@ -32,6 +32,10 @@ const bodyHtml = document.body.innerHTML
 const socket = io(server);
 
 
+function to_real(valor) {
+    return valor.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+}
+
 // Funções ================================================================================= 
 function logout(){ // Realiza o Logout limpando os caches e voltando para o login
     sessionStorage.clear()
@@ -307,7 +311,7 @@ async function status_caixa(){
 
     if(res){
         st.classList.add('text-bg-success')
-        st.textContent = `Caixa Aberto - R$${res['fechamento']}`
+        st.textContent = `Caixa Aberto - ${to_real(res[`fechamento`])}`
     }else{
         st.classList.add('text-bg-danger')
         st.textContent = `Caixa Fechado - R$0`
