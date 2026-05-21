@@ -60,6 +60,10 @@
             maxDistance: 19.00,
             spacing: 19.00
         })
+
+        if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
     </script>
 </body>
 </html>
