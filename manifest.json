@@ -18,7 +18,7 @@
   ],
   "dir": "auto",
   "lang": "pt",
-  "orientation": "auto",
+  "orientation": "any",
   "display": "minimal-ui",
   "related_applications": [
     {
@@ -593,14 +593,6 @@
       "src": "ios/1024.png",
       "sizes": "1024x1024",
       "type": "image/png"
-    }
-  ],
-  "screenshots" : [
-    {
-      "src": "screenshot.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpg",
-      "platform": "wide"
     }
   ]
 }
