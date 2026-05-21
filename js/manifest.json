@@ -2,9 +2,9 @@
   "name": "Hubbix Gourmet",
   "theme_color": "#5e8b60",
   "background_color": "#000000",
-  "short_name": "HBX Gourmet",
+  "short_name": "Hubbix Gourmet",
   "description": "Um novo conceito de Gestão",
-  "start_url": "https://gourmet.hubbix.com.br",
+  "start_url": "/",
   "display_override": [
     "standalone",
     "minimal-ui",
@@ -18,7 +18,7 @@
   ],
   "dir": "auto",
   "lang": "pt",
-  "orientation": "portrait",
+  "orientation": "auto",
   "display": "minimal-ui",
   "related_applications": [
     {
