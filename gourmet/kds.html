@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/jquery.inputmask.min.js"></script>
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script>
-									const = socket.io("https://panel.lp.hubbix.com.br")
+									// const = socket.io("https://panel.lp.hubbix.com.br")
         function ntf(title, msg){
             if (Notification.permission === "granted") {
                 new Notification(title, {
@@ -36,9 +36,9 @@
             }
         }
 
-        socket.on('action', function(tipo) {
-            if(tipo == "pedido"){location.reload()}
-        });
+        //socket.on('action', function(tipo) {
+        //    if(tipo == "pedido"){location.reload()}
+        //});
 
         async function _(){
             const req = await request("pedidos")
