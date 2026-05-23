@@ -35,6 +35,10 @@
                 Notification.requestPermission();
             }
         }
+
+		socket.on('action', function(tipo) {
+           if(tipo == "pedido"){location.reload()}
+        });
 		
         async function _(){
             const req = await request("pedidos")
