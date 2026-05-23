@@ -24,6 +24,8 @@
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
 	<script src="/js/gourmet.js"></script>
     <script>
+		const socket = io(server)
+		
         function ntf(title, msg){
             if (Notification.permission === "granted") {
                 new Notification(title, {
