@@ -36,7 +36,8 @@
         }
 
 		socket.on('action', function(tipo) {
-           if(tipo == "pedido"){location.reload()}
+			console.log(tipo, "Here")
+        	if(tipo == "pedido"){location.reload()}
         });
 		
         async function _(){
