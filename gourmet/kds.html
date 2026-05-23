@@ -146,8 +146,8 @@
                         btnEntregue.innerHTML = `<i class="bi bi-person-walking"></i> Entregue`
                         btnEntregue.addEventListener('click', async function(){
                             dd = {'cmd':cmd, 'mat': mat}
-                            req = await request('pedidos', 'PATCH', JSON.stringify(dd))
-                            res = await req.json()
+                            const req = await request('pedidos', 'PATCH', JSON.stringify(dd))
+                            const res = await req.json()
                             
                             if(req.ok){location.reload()}
                             else{toast(res)}
