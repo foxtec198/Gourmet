@@ -29,7 +29,7 @@ const div = document.createElement('div')
 div.id = 'snackbar'
 document.body.appendChild(div)
 const bodyHtml = document.body.innerHTML
-// const socket = io(server);
+const socket = io(server);
 
 
 function to_real(valor) {
@@ -2432,13 +2432,13 @@ async function get_relatorios(filter='mes'){
 
 // Controle de Eventos =================================================================================
 if(window.location.pathname != '/' && window.location.pathname != '/gourmet/kds.html'){
-    // socket.on('action', function(tipo) { // Escuta os eventos 
-    //     const frame = sessionStorage.getItem('frame').replace("/gourmet/", "").replace(".html", "")
+    socket.on('action', function(tipo) { // Escuta os eventos 
+        const frame = sessionStorage.getItem('frame').replace("/gourmet/", "").replace(".html", "")
     
-    //     if(tipo == "venda" && frame == 'vendas'){location.reload()}
-    //     if(tipo == "pedido" && frame == 'pedidos'){location.reload()}
-    //     if(tipo == "comanda" && frame == 'comandas'){location.reload()}
-    // });
+        if(tipo == "venda" && frame == 'vendas'){location.reload()}
+        if(tipo == "pedido" && frame == 'pedidos'){location.reload()}
+        if(tipo == "comanda" && frame == 'comandas'){location.reload()}
+    });
     
     // Controle de Permissao
     get_config() // PEga as configurações atualizadas
