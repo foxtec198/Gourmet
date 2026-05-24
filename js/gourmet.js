@@ -867,7 +867,7 @@ async function enviar_prods(t=null){
             if(t){t.innerHTML = spinner}
             req = await request("pedidos", "POST", JSON.stringify(data))
             res = await req.json()
-            if(req.ok){ change_screen("pedidos"); }
+            if(req.ok){ location.reload(); }
             else{ t.textContent = 'Novo Pedido'; toast(res); }
         }else{toast('Selecione algum produto!')}
     }else{toast('Comanda ou Mesa obrigatoria!')}
