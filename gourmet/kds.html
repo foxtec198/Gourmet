@@ -13,6 +13,7 @@
     <!-- CSS Local -->
     <link rel="shortcut icon" href="/img/newFav.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/gourmet.css">
+	<style>body{zoom: 90%}</style>
 </head>
 <body data-bs-theme="dark">
     <div class="d-flex justify-content-left flex-wrap gap-2 p-2" id="pedidos"></div>
@@ -100,7 +101,7 @@
                                             // NOVO
                                             badgePreparo = "<span class='badge text-bg-success fw-bold'>NOVO PEDIDO</span>"
                                             try{ntf('Novo Pedido', 'Confira a tela KDS para retirar novos pedidos!')}catch(e){console.error(e)}
-                                        }else if(diffMin > 6 && diffMin <= 20){
+                                        }else if(diffMin > 1 && diffMin <= 16){
                                             // EM PREPARO
                                             badgePreparo = "<span class='badge text-bg-info fw-bold'>EM PREPARO</span>"
                                         }else{
